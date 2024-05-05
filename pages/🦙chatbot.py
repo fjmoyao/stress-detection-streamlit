@@ -6,6 +6,11 @@ import utils_app
 st.set_page_config(page_icon=":llama:", layout="wide",
                    page_title="Llamma 3 demo")
 
+import streamlit as st
+import os
+
+result = os.popen('pip list').read()
+st.code(result, language=None)
 
 def icon(emoji: str):
     """Shows an emoji as a Notion-style page icon."""
