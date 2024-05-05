@@ -35,5 +35,11 @@ def main():
         else:
             st.error("Please enter some text for analysis.")
 
+    import streamlit as st
+    import os
+
+    result = os.popen('pip list').read()
+    print(result, language=None)
+
 if __name__ == "__main__":
     main()
