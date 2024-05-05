@@ -107,3 +107,6 @@ depression_detection
 document
 saved_roberta_model
 literature
+.streamlit
+.venv
+__init__.py
