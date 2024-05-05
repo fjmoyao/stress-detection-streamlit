@@ -38,8 +38,6 @@ def main():
     import streamlit as st
     import os
 
-    result = os.popen('pip list').read()
-    print(result, language=None)
 
 if __name__ == "__main__":
     main()
