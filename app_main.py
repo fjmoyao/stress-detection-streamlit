@@ -23,14 +23,17 @@ def main():
     
     if st.button("Analyze"):
         if text:
-            output = utils_app.query({"inputs": text,})
-            result = utils_app.get_label_score(output)
+            try:
+                output = utils_app.query({"inputs": text,})
+                result = utils_app.get_label_score(output)
 
-            label = list(result.keys())[0]
-            label = str(label).replace("1","Stress").replace("0","Neutral")
-            
-            st.write("Prediction Result:")
-            st.write(label)
+                label = list(result.keys())[0]
+                label = str(label).replace("1","Stress").replace("0","Neutral")
+                
+                st.write("Prediction Result:")
+                st.write(label)
+            except:
+                st.warning("Could not get a response, please try again.")
 
         else:
             st.error("Please enter some text for analysis.")
