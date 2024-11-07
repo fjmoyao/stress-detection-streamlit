@@ -19,7 +19,7 @@ def main():
         - **Simple Interface:** An easy-to-use interface that does not require technical knowledge.
     """)
 
-    text = st.text_area("Enter the text for analysis:", height=15)
+    text = st.text_area("Enter the text for analysis:")
     
     if st.button("Analyze"):
         if text:
